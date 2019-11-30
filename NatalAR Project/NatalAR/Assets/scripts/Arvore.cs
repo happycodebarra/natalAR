@@ -19,22 +19,49 @@ public class Arvore : MonoBehaviour
     public int codEnfeite;
     public int codPresente;
 
+    private void Start()
+    {
+        carregarArvore();
+    }
+
     public void carregarArvore()
     {
+        // Desativando
         for (int i = 0; i < troncos.Length; i++)
         {
             troncos[i].SetActive(false);
         }
 
+        for (int i = 0; i < vegetacoes.Length; i++)
+        {
+            vegetacoes[i].SetActive(false);
+        }
 
+        for (int i = 0; i < enfeites.Length; i++)
+        {
+            enfeites[i].SetActive(false);
+        }
 
-        vegetacoes[codTronco].SetActive(false);
+        for (int i = 0; i < presentes.Length; i++)
+        {
+            presentes[i].SetActive(false);
+        }
+
+        for (int i = 0; i < estrelas.Length; i++)
+        {
+            estrelas[i].SetActive(false);
+        }
+
+        // Ativando
+        vegetacoes[codTronco].SetActive(true);
         troncos[codTronco].SetActive(true);
-        vegetacoes[codVegetacao].SetActive(false);
-        estrelas[codEstrela].SetActive(false);
-        presentes[codPresente].SetActive(false);
-
+        vegetacoes[codVegetacao].SetActive(true);
+        estrelas[codEstrela].SetActive(true);
+        presentes[codPresente].SetActive(true);
+        enfeites[codEnfeite].SetActive(true);
     }
+
+
 }
 
 

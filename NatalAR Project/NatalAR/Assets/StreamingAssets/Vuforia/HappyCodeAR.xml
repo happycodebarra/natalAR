@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="qr-code-linktree-hc" size="1.000000 1.000000" />
+    <ImageTarget name="qr-code" size="1.000000 1.000000" />
+    <ImageTarget name="qrcode3" size="1.000000 1.000000" />
+    <ImageTarget name="qrcode2" size="1.000000 1.000000" />
+    <ImageTarget name="qrcode1" size="1.000000 1.000000" />
+    <ImageTarget name="mousepad" size="1.000000 1.019222" />
+  </Tracking>
+</QCARConfig>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Arvore : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class Arvore : MonoBehaviour
     public int codEstrela;
     public int codEnfeite;
     public int codPresente;
+
+    [Header("Entrada e Saida")]
+    public InputField[] inputFields;
 
     private void Start()
     {
@@ -61,7 +65,42 @@ public class Arvore : MonoBehaviour
         enfeites[codEnfeite].SetActive(true);
     }
 
-
+    public void updateFields(bool _input)
+    {
+        if (!_input)
+        {
+            for (int i = 0; i < inputFields.Length; i++)
+            {
+                if (i == 0)
+                    inputFields[i].text = codTronco.ToString();
+                else if (i == 1)
+                    inputFields[i].text = codVegetacao.ToString();
+                else if (i == 2)
+                    inputFields[i].text = codEstrela.ToString();
+                else if (i == 3)
+                    inputFields[i].text = codPresente.ToString();
+                else if (i == 4)
+                    inputFields[i].text = codEnfeite.ToString();
+            }
+        }
+        
+        else
+        {
+            for (int i = 0; i < inputFields.Length; i++)
+            {
+                if (i == 0)
+                    codTronco = System.Int32.Parse(inputFields[i].text);
+                else if (i == 1)
+                    codVegetacao = System.Int32.Parse(inputFields[i].text);
+                else if (i == 2)
+                    codEstrela = System.Int32.Parse(inputFields[i].text);
+                else if (i == 3)
+                    codPresente = System.Int32.Parse(inputFields[i].text);
+                else if (i == 4)
+                    codEnfeite = System.Int32.Parse(inputFields[i].text);
+            }
+        }
+    }
 }
 
 

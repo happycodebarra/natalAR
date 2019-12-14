@@ -72,15 +72,15 @@ public class Arvore : MonoBehaviour
             for (int i = 0; i < inputFields.Length; i++)
             {
                 if (i == 0)
-                    inputFields[i].text = codTronco.ToString();
+                    inputFields[i].text = (codTronco+1).ToString();
                 else if (i == 1)
-                    inputFields[i].text = codVegetacao.ToString();
+                    inputFields[i].text = (codVegetacao+1).ToString();
                 else if (i == 2)
-                    inputFields[i].text = codEstrela.ToString();
+                    inputFields[i].text = (codEstrela+1).ToString();
                 else if (i == 3)
-                    inputFields[i].text = codPresente.ToString();
+                    inputFields[i].text = (codPresente+1).ToString();
                 else if (i == 4)
-                    inputFields[i].text = codEnfeite.ToString();
+                    inputFields[i].text = (codEnfeite+1).ToString();
             }
         }
         
@@ -89,16 +89,18 @@ public class Arvore : MonoBehaviour
             for (int i = 0; i < inputFields.Length; i++)
             {
                 if (i == 0)
-                    codTronco = System.Int32.Parse(inputFields[i].text);
+                    codTronco = System.Int32.Parse(inputFields[i].text)-1;
                 else if (i == 1)
-                    codVegetacao = System.Int32.Parse(inputFields[i].text);
+                    codVegetacao = System.Int32.Parse(inputFields[i].text)-1;
                 else if (i == 2)
-                    codEstrela = System.Int32.Parse(inputFields[i].text);
+                    codEstrela = System.Int32.Parse(inputFields[i].text)-1;
                 else if (i == 3)
-                    codPresente = System.Int32.Parse(inputFields[i].text);
+                    codPresente = System.Int32.Parse(inputFields[i].text)-1;
                 else if (i == 4)
-                    codEnfeite = System.Int32.Parse(inputFields[i].text);
+                    codEnfeite = System.Int32.Parse(inputFields[i].text)-1;
             }
+
+            carregarArvore();
         }
     }
 }
